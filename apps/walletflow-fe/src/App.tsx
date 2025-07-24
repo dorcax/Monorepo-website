@@ -1,11 +1,13 @@
-import React from 'react'
-import { Button } from './components/ui/button'
 import "./index.css"
+import Login from "./pages/auth/Login"
 import Register from './pages/auth/Register'
 
 const App = () => {
   return (
-    <div><Register/> </div>
+    <div>
+      {/* <Register/> */}
+      <Login/>
+     </div>
   )
 }
 
