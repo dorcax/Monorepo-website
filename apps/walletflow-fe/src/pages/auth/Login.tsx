@@ -60,7 +60,7 @@ const Login = () => {
                 )}
               />
             </div>
-           <div className='flex gap-2 items-center '> <CircleAlert /> <span className='capitalize text-gray-500 text-sm'>forgot password ?</span></div>
+           <div className='flex gap-2 items-center '> <CircleAlert  className='size-4'/> <span className='capitalize text-gray-500 text-sm'>forgot password ?</span></div>
             <Button className='capitalize text-sm w-full'>login</Button>
             <p className='text-center text-gray-500 text-sm'>Don't have an account ?<span className='text-black capitalize px-1'>sign up</span></p>
           </form>
