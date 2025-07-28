@@ -17,12 +17,12 @@ const Login = () => {
   }
   return (
     <div className='flex justify-center items-center '>
-      <div className=' w-full max-w-lg my-20 px-4'>
+      <div className=' w-full max-w-xl my-20 px-4'>
         {/* header of the form */}
         <div className='flex items-center justify-center flex-col'>
-          <img src="./Group.png" alt="logo image" className='object-cover ' />
-          <h2 className='font-semibold text-lg pt-4'>Create a Wallet flow account</h2>
-          <p className='text-gray-600 text-xs pt-1'>By signing up, you agree to our privacy policy and terms of use.</p>
+          <img src="./Group.png" alt="logo image" className='object-cover w-[40px] ' />
+          <h2 className='font-semibold text-3xl pt-5'>Login to your account</h2>
+          <p className='text-gray-600 text-base pt-1'>please ensure all fields are correct </p>
         </div>
         {/* form part  */}
        <div className=' my-10'>
@@ -34,9 +34,9 @@ const Login = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-2 text-gray-700 text-xs left-3 w-10 bg-white'>Email</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-10 bg-white'>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="jocey@gmail.com" {...field}  className='py-6 border border-gray-600 placeholder:text-xs'/>
+                      <Input placeholder="jocey@gmail.com" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -51,9 +51,9 @@ const Login = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-2 text-gray-700 text-xs left-3 w-14 bg-white capitalize'>password</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-18 bg-white capitalize'>password</FormLabel>
                     <FormControl>
-                      <Input placeholder="password" {...field}  className='py-6 border border-gray-600 placeholder:text-xs'/>
+                      <Input placeholder="password" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -61,8 +61,8 @@ const Login = () => {
               />
             </div>
            <div className='flex gap-2 items-center '> <CircleAlert  className='size-4'/> <span className='capitalize text-gray-500 text-sm'>forgot password ?</span></div>
-            <Button className='capitalize text-sm w-full'>login</Button>
-            <p className='text-center text-gray-500 text-sm'>Don't have an account ?<span className='text-black capitalize px-1'>sign up</span></p>
+            <Button className='capitalize text-base w-full py-7.5'>login</Button>
+            <p className='text-center text-gray-500 text-lg'>Don't have an account ?<span className='text-black capitalize px-1'>sign up</span></p>
           </form>
         </Form>
        </div>
