@@ -21,8 +21,8 @@ const Register = () => {
         {/* header of the form */}
         <div className='flex items-center justify-center flex-col'>
           <img src="./Group.png" alt="logo image" className='object-cover ' />
-          <h2 className='font-semibold text-3xl pt-4'>Create a Wallet flow account</h2>
-          <p className='text-gray-600 text-base pt-1'>By signing up, you agree to our privacy policy and terms of use.</p>
+          <h2 className='font-semibold text-2xl pt-4'>Create a Wallet flow account</h2>
+          <p className='text-gray-600 text-sm pt-1'>By signing up, you agree to our privacy policy and terms of use.</p>
         </div>
         {/* form part  */}
        <div className=' my-10'>
@@ -37,7 +37,7 @@ const Register = () => {
               <FormLabel className='absolute -top-3 text-base text-gray-700 left-4 w-[100px] bg-white capitalize '>account type</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className='w-full py-8  border border-gray-600 text-base' >
+                  <SelectTrigger className='w-full py-6  border border-gray-600 text-sm' >
                     <SelectValue placeholder="select the account type" />
                   </SelectTrigger>
                 </FormControl>
@@ -59,7 +59,7 @@ const Register = () => {
                   <FormItem className='w-full relative'>
                     <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-10 bg-white'>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="jocey@gmail.com" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
+                      <Input placeholder="jocey@gmail.com" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -75,7 +75,7 @@ const Register = () => {
                   <FormItem className='w-full relative'>
                     <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-20 bg-white capitalize'>first name</FormLabel>
                     <FormControl>
-                      <Input placeholder="firstname" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
+                      <Input placeholder="firstname" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -88,7 +88,7 @@ const Register = () => {
                   <FormItem className='w-full relative'>
                     <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-20 bg-white  capitalize'>Last Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="lastname" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
+                      <Input placeholder="lastname" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,7 +105,7 @@ const Register = () => {
               <FormLabel className='absolute -top-3 text-base text-gray-700 left-4 w-18 bg-white capitalize '>country</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger className='w-full py-8 border border-gray-600 '>
+                  <SelectTrigger className='w-full py-6 border border-gray-600 text-sm '>
                     <SelectValue placeholder="Select country" className='' />
                   </SelectTrigger>
                 </FormControl>
@@ -127,7 +127,7 @@ const Register = () => {
                   <FormItem className='w-full relative'>
                     <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-28 bg-white capitalize'>phone Number</FormLabel>
                     <FormControl>
-                      <Input placeholder="phone number" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
+                      <Input placeholder="phone number" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -142,15 +142,15 @@ const Register = () => {
                   <FormItem className='w-full relative'>
                     <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-18 bg-white capitalize'>password</FormLabel>
                     <FormControl>
-                      <Input placeholder="password" {...field}  className='py-8 border border-gray-600 placeholder:text-base'/>
+                      <Input placeholder="password" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
             </div>
-            <Button className='capitalize text-base w-full py-7.5 '>create account</Button>
-            <p className='text-center text-gray-500 text-lg'>Already have an account ?<span className='text-black capitalize font-semibold px-1'>sign in</span></p>
+            <Button className='capitalize text-base w-full py-6 '>create account</Button>
+            <p className='text-center text-gray-500 text-base'>Already have an account ?<span className='text-black capitalize font-semibold px-1'><a href="/login">sign in</a></span></p>
           </form>
         </Form>
        </div>

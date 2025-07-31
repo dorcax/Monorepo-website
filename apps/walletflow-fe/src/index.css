@@ -118,4 +118,7 @@
     @apply bg-background text-foreground;
      font-family: "Outfit", sans-serif;
   }
+  /* .hide-default-close [data-dialog-close]{
+    display: none !important;
+  } */
 }
