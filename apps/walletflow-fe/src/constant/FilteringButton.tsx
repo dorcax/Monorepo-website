@@ -1,4 +1,5 @@
 import AddTransferFund from "@/drawer/AddTransferFund";
+import WithdrawFund from "@/drawer/WithdrawFunds";
 import { ArrowRightLeft, Minus, Plus } from "lucide-react";
 
 
@@ -9,7 +10,8 @@ export const filteringButton =[{
     
 },{
     name:"withdraw",
-    icon:<Minus />
+    icon:<Minus />,
+    handleClick:<WithdrawFund/>
 
 },{
     name:"transfer",
