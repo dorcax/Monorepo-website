@@ -34,9 +34,9 @@ const CustomDrawer = ({ className, children, title, subtext }: customDrawerProps
                         {subtext && <SheetDescription>
                             {subtext}
                         </SheetDescription>}
-                        {children}
+                       
                     </SheetHeader>
-                    
+                     {children}
                 </SheetContent>
             </Sheet>
         </div>

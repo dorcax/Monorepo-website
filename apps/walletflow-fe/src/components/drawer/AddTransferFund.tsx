@@ -19,14 +19,17 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Input } from '@/components/ui/input'
+import { usePopUp } from '@/context/PopUpContext'
 const AddTransferFund = () => {
   const form = useForm()
   const onSubmit = () => {
     console.log("hello")
   }
+  const {closeDrawer} =usePopUp()
   return (
+
     <CustomDrawer title='Transfer Funds ' subtext='select the currency you want to transfer funds to' className='bg-white shadow-5xl py-12'>
-      <Button className='fixed top-0 left-[71.3%] py-6 w-[50px] rounded-r-none rounded-tl-none'><X className='size-7' /></Button>
+      <Button className='fixed top-0 left-[71.3%] py-6 w-[50px] rounded-r-none rounded-tl-none'><X className='size-7' onClick={()=>closeDrawer()}/></Button>
       <div>
         <Form {...form}>
           <form action="" onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>

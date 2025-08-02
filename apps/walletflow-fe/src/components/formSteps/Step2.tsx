@@ -12,8 +12,10 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import { usePopUp } from "@/context/PopUpContext"
+import { CircleAlert } from "lucide-react"
+import SuccessDialog from "../dialog/SuccessDialog"
 import { Button } from '../ui/button'
-import { Plus } from "lucide-react"
 
 type step2Props = {
     form: any,
@@ -22,6 +24,7 @@ type step2Props = {
 }
 
 const Step2 = ({ form, setStep }: step2Props) => {
+    const{openDialog} =usePopUp()
     return (
         <div>
             <div className="mb-5">
@@ -50,7 +53,15 @@ const Step2 = ({ form, setStep }: step2Props) => {
                     )}
                 />
             </div>
-            <Button className='flex gap-2 w-full' onClick={()=>setStep(3)}> <Plus /> <span>Add new Withdrawal bank</span></Button>
+            {/* button to click on add bank */}
+           <div className="mb-4">
+             <button className="flex gap-1 items-center " onClick={() => setStep(3)}>
+                <CircleAlert className="size-6"/>
+              <span className=" text-sm text-gray-700">  Add New Withdrawal Bank? </span>
+            </button>
+            </div>
+            <Button className='flex gap-2 w-full' onClick={()=>openDialog(<SuccessDialog text="your withdrawal was successfully!"/>)}> Proceed</Button>
+           
         </div>
     )
 }

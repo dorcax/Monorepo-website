@@ -1,12 +1,14 @@
-import AddTransferFund from "@/drawer/AddTransferFund";
-import WithdrawFund from "@/drawer/WithdrawFunds";
+import AddTransferFund from "@/components/drawer/AddTransferFund";
+import FundWallet from "@/components/drawer/FundWallet";
+import WithdrawFund from "@/components/drawer/WithdrawFunds";
 import { ArrowRightLeft, Minus, Plus } from "lucide-react";
 
 
 
 export const filteringButton =[{
     name:"fund wallet",
-    icon:<Plus/>
+    icon:<Plus/>,
+    handleClick:<FundWallet/>
     
 },{
     name:"withdraw",

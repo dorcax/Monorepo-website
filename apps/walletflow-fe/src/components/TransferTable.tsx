@@ -5,7 +5,7 @@ import { Copy } from 'lucide-react'
 import Summary from './Summary'
 import { usePopUp } from '@/context/PopUpContext'
 
-import AddTransferFund from '@/drawer/AddTransferFund'
+import AddTransferFund from '@/components/drawer/AddTransferFund'
 
 const TransferTable = () => {
     const {openDrawer} =usePopUp()

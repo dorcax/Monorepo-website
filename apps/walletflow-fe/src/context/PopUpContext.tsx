@@ -1,8 +1,11 @@
 import React, { Children, createContext, useContext, useState, type ReactNode } from 'react'
 
 type PopUpContextType ={
-    openDrawer: (content:ReactNode)=>void,
-    isDrawerOpen :boolean ,
+    openDrawer: (content:ReactNode)=>void
+    openDialog:(conteent:ReactNode)=>void
+    closeDialog:()=>void
+    isDrawerOpen :boolean 
+    isDialogOpen:boolean
     closeDrawer:()=>void
 }
 const PopUpContext =createContext<PopUpContextType | undefined>(undefined)
@@ -17,23 +20,33 @@ export const usePopUp =()=>{
 }
 const PopUpProvider = ({children}:{children:React.ReactNode}) => {
     const [isDrawerOpen,setDrawerOpen] =useState(false)
-    const [popUpContext,setPopUpContext] =useState<ReactNode>(null)
+    const [isDialogOpen,setIsDialogOpen] =useState(false)
+    const [popUpContent,setPopUpContent] =useState<ReactNode>(null)
    
     const openDrawer=(context:ReactNode)=>{
 
         setDrawerOpen(true)
-        setPopUpContext(context)
+        setPopUpContent(context)
 
     }
     const closeDrawer=()=>{
         setDrawerOpen(false)
-        setPopUpContext(null)
+        setPopUpContent(null)
+    }
+    const openDialog=(content:ReactNode)=>{
+      setIsDialogOpen(true)
+      setPopUpContent(content)
+    }
+    const closeDialog=()=>{
+      setIsDialogOpen(false)
+      setPopUpContent(null)
+
     }
   return (
  
-    <PopUpContext.Provider value={{isDrawerOpen,openDrawer,closeDrawer}}>
+    <PopUpContext.Provider value={{isDrawerOpen,openDrawer,closeDrawer,isDialogOpen,openDialog,closeDialog}}>
       {children}
-      {popUpContext}
+      {popUpContent}
       {/* make it open globally */}
     </PopUpContext.Provider>
   )
