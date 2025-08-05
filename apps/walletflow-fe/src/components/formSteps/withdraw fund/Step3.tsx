@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../../ui/form'
 import {
     Select,
     SelectContent,
@@ -7,14 +7,14 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { Input } from '../ui/input'
-import { Button } from '../ui/button'
+import { Input } from '../../ui/input'
+import { Button } from '../../ui/button'
 
 type step3Props = {
     form: any
-    isFormSubmitted: boolean
+    isFormSubmitted?: boolean
 }
-const Step3 = ({ form, isFormSubmitted }: step3Props) => {
+const Step3 = ({ form}: step3Props) => {
     return (
         <div className=''>
             <div className='flex gap-4 items-center mb-5'>

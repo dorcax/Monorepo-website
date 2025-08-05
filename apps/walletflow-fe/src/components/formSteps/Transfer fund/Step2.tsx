@@ -1,3 +1,4 @@
+import React from 'react'
 import {
     FormControl,
     FormField,
@@ -13,28 +14,20 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { usePopUp } from "@/context/PopUpContext"
-import { CircleAlert } from "lucide-react"
-import SuccessDialog from "../dialog/SuccessDialog"
-import { Button } from '../ui/button'
-
-type step2Props = {
-    form: any,
-    isFormSubmitted?: boolean,
-    setStep: (value: number) => void
-}
-
-const Step2 = ({ form, setStep }: step2Props) => {
-    const{openDialog} =usePopUp()
-    return (
-        <div>
-            <div className="mb-5">
+import { CircleAlert, Plus } from "lucide-react"
+import SuccessDialog from "../../dialog/SuccessDialog"
+import { Button } from '../../ui/button'
+const Step2 = ({form,setStep}:{form:any,setStep:(n:number)=>void}) => {
+  return (
+    <div>
+              <div className="mb-5">
 
                 <FormField
                     control={form.control}
                     name="wallet"
                     render={({ field }) => (
                         <FormItem className='relative'>
-                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs w-28 text-gray-700'>Select saved wallet</FormLabel>
+                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700'>Select recipients account</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger className='w-full py-6'>
@@ -53,17 +46,11 @@ const Step2 = ({ form, setStep }: step2Props) => {
                     )}
                 />
             </div>
-            {/* button to click on add bank */}
-           <div className="mb-4">
-             <button className="flex gap-1 items-center " onClick={() => setStep(3)}>
-                <CircleAlert className="size-6"/>
-              <span className=" text-sm text-gray-700">  Add New Withdrawal Bank? </span>
-            </button>
-            </div>
-            <Button className='flex gap-2 w-full' onClick={()=>openDialog(<SuccessDialog text="your withdrawal was successfully!"/>)}> Proceed</Button>
-           
-        </div>
-    )
+            <Button className='flex gap-10 w-full capitalize' onClick={()=>setStep(2)}>
+                <Plus/>
+                <span>add new recipient</span></Button>
+    </div>
+  )
 }
 
 export default Step2

@@ -1,7 +1,7 @@
 import CustomDrawer from '@/common/CustomDrawer'
-import Step1 from '@/components/formSteps/Step1'
-import Step2 from '@/components/formSteps/Step2'
-import Step3 from '@/components/formSteps/Step3'
+import Step1 from '@/components/formSteps/withdraw fund/Step1'
+import Step2 from '@/components/formSteps/withdraw fund/Step2'
+import Step3 from '@/components/formSteps/withdraw fund/Step3'
 import { Button } from '@/components/ui/button'
 import {
     Form

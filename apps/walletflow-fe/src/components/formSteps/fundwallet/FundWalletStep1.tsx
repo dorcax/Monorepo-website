@@ -13,13 +13,14 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { Button } from '../ui/button'
-import { Input } from '../ui/input'
+import { Button } from '../../ui/button'
+import { Input } from '../../ui/input'
 import { CircleAlert, LoaderCircle } from "lucide-react"
 type step1Props = {
     form: any,
     isFormSubmitted?: boolean,
     setStep: (value: number) => void
+    
 }
 const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
      

@@ -1,14 +1,12 @@
+import Notification from '@/components/drawer/Notification'
 import Sidebar from '@/components/Sidebar'
-import Summary from '@/components/Summary'
-import TransferTable from '@/components/TransferTable'
-import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { filteringButton } from '@/constant/FilteringButton'
-import { Bell, BellRing, Headset, Search } from 'lucide-react'
-import React from 'react'
+import { usePopUp } from '@/context/PopUpContext'
+import { BellRing, Headset, Search } from 'lucide-react'
 import { Outlet } from 'react-router-dom'
 
 const Dashboard = () => {
+  const {openDrawer} =usePopUp()
   return (
     <div className='bg-[#F4F4F4]  h-screen '>
       <div className='flex gap-6 p-10'>
@@ -33,7 +31,7 @@ const Dashboard = () => {
               Support
             </div>
             {/* notification */}
-            <div className='relative'>   <BellRing className='w-8 h-8' />
+            <div className='relative' onClick={()=>openDrawer(<Notification/>)}>   <BellRing className='w-8 h-8' />
               <span className=' absolute top-0 right-0 w-2.5 h-2.5 rounded-full bg-red-600' />
             </div>
             {/* test mode */}

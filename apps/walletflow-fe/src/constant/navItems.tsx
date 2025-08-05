@@ -1,54 +1,55 @@
 // navItems.js or navItems.ts
 import {
-  LayoutDashboard,
-  LocateIcon,
-  RepeatIcon,
-  UsersIcon,
   FileTextIcon,
-  SettingsIcon,
+  LayoutDashboard,
+  RepeatIcon,
   SendIcon,
-  Wallet,
+  SettingsIcon,
+  Users,
+  UsersIcon,
+  Wallet
 } from "lucide-react";
 
 export const navItems = [
   {
     label: "Dashboard",
-    icon: <LayoutDashboard/>,
+    icon: <LayoutDashboard className="size-5"/>,
     path: "/dashboard",
-  },
-  {
-    label: "Track",
-    icon: <LocateIcon/>,
-    path: "/track",
   },
    {
     label: "Wallet",
-    icon: <Wallet />,
-    path: "/track",
+    icon: <Wallet  className="size-5"/>,
+    path: "/wallet",
   },
   {
+    label: "Beneficiaries",
+    icon: <Users  className="size-5"/>,
+    path: "/beneficiaries",
+  },
+  
+  {
     label: "Exchange",
-    icon: <RepeatIcon/>,
+    icon: <RepeatIcon className="size-5"/>,
     path: "/exchange",
   },
   {
     label: "Recipient",
-    icon: <UsersIcon />,
+    icon: <UsersIcon  className="size-5"/>,
     path: "/recipient",
   },
   {
     label: "Transaction",
-    icon: <SendIcon />,
+    icon: <SendIcon className="size-5" />,
     path: "/transaction",
   },
   {
     label: "Reports",
-    icon: <FileTextIcon />,
+    icon: <FileTextIcon  className="size-5"/>,
     path: "/reports",
   },
   {
     label: "Settings",
-    icon: <SettingsIcon/>,
+    icon: <SettingsIcon className="size-5"/>,
     path: "/settings",
   },
 ];

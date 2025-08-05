@@ -1,17 +1,20 @@
 import { navItems } from '@/constant/navItems';
+import { usePopUp } from '@/context/PopUpContext';
 import { ChevronDown } from 'lucide-react';
-import React from 'react';
+import LogOut from './popOver/LogOut';
+
 
 const Sidebar = () => {
   const name = "Dorcas";
+  const {openPopOver} =usePopUp()
 
   return (
-    <aside className="bg-white shadow-2xl w-[200px] h-[calc(100vh-80px)] rounded-2xl px-2">
+    <aside className="bg-white shadow-2xl w-[200px] h-[calc(100vh-80px)] rounded-2xl px-2 ">
       {/* Logo */}
       <img src="./sidebarlogo.png" alt="Sidebar Logo" className="px-6 py-7 w-full" />
 
       {/* User Info */}
-      <div className="border rounded-full p-1.5 flex items-center justify-between mb-4">
+      <div className="border rounded-full p-1.5 flex items-center justify-between mb-4"  onClick={()=>openPopOver(<LogOut/>)}>
         <div className="border rounded-full size-8 flex items-center justify-center text-xs bg-gray-200">
           MN
         </div>
@@ -36,9 +39,9 @@ const Sidebar = () => {
           return (
             <li
               key={item.label}
-              className="px-4 py-2.5 flex items-center  gap-2 text-base hover:bg-black hover:text-white hover:rounded-md cursor-pointer text-gray-600"
+              className="px-4 py-2.5 flex items-center  gap-2 text-lg hover:bg-black hover:text-white hover:rounded-md cursor-pointer text-gray-600"
             >
-            <span className='w-5 h-5 mr-1'>  {Icon}</span>
+            <span className=' mr-1'>  {Icon}</span>
               {item.label}
             </li>
           );

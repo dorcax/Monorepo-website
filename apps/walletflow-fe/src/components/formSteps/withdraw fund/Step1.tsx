@@ -14,7 +14,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { AlertCircle, Loader } from 'lucide-react'
-import { Button } from '../ui/button'
+import { Button } from '../../ui/button'
 
 type step1Props ={
     form:any,
