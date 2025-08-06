@@ -9,10 +9,7 @@ const CustomPopOver = ({children,className}:{children:ReactNode,className:string
     const {openPopOver ,isPopOverOpen} =usePopUp()
   return (
   <Popover open={isPopOverOpen} onOpenChange ={openPopOver}>
-       <PopoverTrigger >
-        {/* This can be any clickable element */}
-        <button className="hidden" /> {/* dummy trigger if you control open manually */}
-      </PopoverTrigger>
+      
   <PopoverContent className={className}>{children}</PopoverContent>
 </Popover>
   )

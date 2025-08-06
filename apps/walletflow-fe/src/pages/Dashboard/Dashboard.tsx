@@ -8,7 +8,7 @@ import { Outlet } from 'react-router-dom'
 const Dashboard = () => {
   const {openDrawer} =usePopUp()
   return (
-    <div className='bg-[#F4F4F4]  h-screen '>
+    <div className='bg-[#f4f4f4]  h-screen '>
       <div className='flex gap-6 p-10'>
         {/* sidebar section */}
         <section className=''>
@@ -22,7 +22,7 @@ const Dashboard = () => {
             <h2 className='text-xl text-gray-500'>Dashboard</h2>
             {/* search input */}
             <div className=' relative'>
-              <Input className='w-[400px] bg-white shadow-2xl rounded-full py-6' placeholder='search here ...' />
+              <Input className='w-[400px] bg-white shadow-2xl rounded-full p-6 ' placeholder='search here ...' />
               <Search className='absolute top-4 right-4 text-gray-500' />
             </div>
             {/* support */}

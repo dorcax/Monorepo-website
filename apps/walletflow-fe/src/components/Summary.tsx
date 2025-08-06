@@ -1,4 +1,4 @@
-import { ChevronsRight } from 'lucide-react'
+import { ChevronsRight, CircleAlert } from 'lucide-react'
 
 const Summary = () => {
   return (
@@ -34,9 +34,10 @@ const Summary = () => {
           <p className=''>see all wallets </p>
           <span className='px-2 text-gray-600'><ChevronsRight /></span>
         </div>
-        
-        <img src="./usa_logo.jpg" alt="" className='size-6' />
       
+
+         <img src="./Vector (1).png" alt="" className='size-4' /> 
+      {/* <CircleAlert className='size-4 text-gray-600'/> */}
        
       </div>
 

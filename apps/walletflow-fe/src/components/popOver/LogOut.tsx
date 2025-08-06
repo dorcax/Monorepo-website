@@ -2,9 +2,11 @@ import CustomPopOver from '@/common/CustomPopOver'
 
 const LogOut = () => {
   return (
-   <CustomPopOver className='bg-white shadow-2xl fixed top-0  left-0'>
-    logout
-   </CustomPopOver>
+    <CustomPopOver className="bg-white p-2 rounded shadow">
+      <button className="text-sm text-red-500 hover:underline">
+        Logout
+      </button>
+    </CustomPopOver>
   )
 }
 
