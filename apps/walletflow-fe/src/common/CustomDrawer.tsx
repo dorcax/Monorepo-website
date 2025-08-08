@@ -27,7 +27,7 @@ const CustomDrawer = ({ className, children, title, subtext }: customDrawerProps
         <div>
             
             <Sheet open={isDrawerOpen} onOpenChange={openDrawer} >
-                <SheetContent className={cn("overflow-y-auto ",className)} closeSheet={false} >
+                <SheetContent className={cn("",className)} closeSheet={false} >
                     {/* <SheetClose asChild className="absolute top-0 -left-4" ><X/></SheetClose> */}
                     <SheetHeader>
                         <SheetTitle>{title}</SheetTitle>

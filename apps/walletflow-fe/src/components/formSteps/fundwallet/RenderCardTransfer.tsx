@@ -15,15 +15,15 @@ import type { ReactNode } from "react"
 const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSubmitted?:boolean,openDialog:(content:ReactNode)=>void}) => {
   return (
         <div>
-                    <div className='mb-5 w-full'>
+                    <div className='mb-8 w-full'>
                         <FormField
                             name="card_number"
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem className='w-full relative '>
-                                    <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-20' >card number</FormLabel>
+                                    <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize px-1' >card number</FormLabel>
                                     <FormControl>
-                                        <Input {...field} className='py-6' placeholder='card number' />
+                                        <Input {...field} className='py-6 border-[#565656]' placeholder='card number' />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -39,9 +39,9 @@ const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSu
                                 control={form.control}
                                 render={({ field }) => (
                                     <FormItem className='w-full relative '>
-                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-18' >card expiry</FormLabel>
+                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize ' >card expiry</FormLabel>
                                         <FormControl>
-                                            <Input {...field} className='py-6' placeholder='' />
+                                            <Input {...field} className='py-6 border-[#565656]' placeholder='MM/YY' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -55,9 +55,9 @@ const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSu
                                 control={form.control}
                                 render={({ field }) => (
                                     <FormItem className='w-full relative '>
-                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-16' >card cvv</FormLabel>
+                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize PX-1' >card cvv</FormLabel>
                                         <FormControl>
-                                            <Input {...field} className='py-6' placeholder='' />
+                                            <Input {...field} className='py-6 border-[#565656]' placeholder='000' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -74,14 +74,14 @@ const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSu
                             render={({ field }) => (
                                 <FormItem className="flex  items-center p-2">
 
-                                    <FormControl >
+                                    <FormControl className="bg-green-400" >
                                         <Switch
                                             checked={field.value}
                                             onCheckedChange={field.onChange}
                                         />
                                     </FormControl>
                                     <div className="space-y-0.5">
-                                        <FormLabel>save for later use</FormLabel>
+                                        <FormLabel className="text-[#969696] text-xs font-medium">save for later use</FormLabel>
 
                                     </div>
                                 </FormItem>

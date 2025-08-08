@@ -34,10 +34,10 @@ const Step2 = ({ form, setStep }: step2Props) => {
                     name="wallet"
                     render={({ field }) => (
                         <FormItem className='relative'>
-                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs w-28 text-gray-700'>Select saved wallet</FormLabel>
+                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs px-2 text-[#4B4B4B]'>Select saved wallet</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
-                                    <SelectTrigger className='w-full py-6'>
+                                    <SelectTrigger className='w-full py-6 border-[#565656]'>
                                         <SelectValue placeholder="Select" />
                                     </SelectTrigger>
 
@@ -54,13 +54,14 @@ const Step2 = ({ form, setStep }: step2Props) => {
                 />
             </div>
             {/* button to click on add bank */}
-           <div className="mb-4">
+           <div className="mb-6">
              <button className="flex gap-1 items-center " onClick={() => setStep(3)}>
-                <CircleAlert className="size-6"/>
-              <span className=" text-sm text-gray-700">  Add New Withdrawal Bank? </span>
+                {/* <CircleAlert className="size-6"/> */}
+              <img src="./Vector (2).png" alt=""className='size-3' />
+              <span className=" text-xs text-[#565656] font-normal">  Add New Withdrawal Bank? </span>
             </button>
             </div>
-            <Button className='flex gap-2 w-full' onClick={()=>openDialog(<SuccessDialog text="your withdrawal was successfully!" logo="./successLogo.png" submitText="Done"/>)}> Proceed</Button>
+            <Button className='flex gap-2 w-full ' onClick={()=>openDialog(<SuccessDialog text="your withdrawal was successfully!" logo="./successLogo.png" submitText="Done"/>)}> Proceed</Button>
            
         </div>
     )

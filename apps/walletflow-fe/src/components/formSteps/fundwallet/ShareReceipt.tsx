@@ -23,17 +23,17 @@ const ShareReceipt = (isFormSubmitted:any) => {
             render={({ field }) => {
               return (
                 <FormItem>
-                  <FormLabel>upload image of receipt</FormLabel>
+                  <FormLabel className='text-[#222222] text-sm'>Upload Image of Receipt</FormLabel>
                   <FormControl>
                     <Input type='file' className='hidden'  {...field} />
 
                   </FormControl>
-                  <div className='border  flex justify-between items-center px-5 py-4 rounded-md'>
+                  <div className='border border-[#565656]  flex justify-between items-center px-5 h-[63px] rounded-md'>
                     <div className='flex items-center gap-2 text-sm text-gray-400'>
-                      <File />
-                      <span>select document</span>
+                      <File  className='size-4  '/>
+                      <span className='text-[#A3A3A3] text-xs'>select document</span>
                     </div>
-                    <Button className='bg-gray-300 rounded-none px-6  py-0 text-gray-800'>Upload</Button>
+                    <button className='bg-[#D7D7D7] rounded-none text-xs text-black h-[24px] w-[80px] font-medium'>Upload</button>
                   </div>
 
 
@@ -45,10 +45,10 @@ const ShareReceipt = (isFormSubmitted:any) => {
 
           />
           {/* <Button className='w-full my-4'>submit</Button> */}
-            <Button className='w-full' onClick={() => openDialog(<SuccessDialog text="Your wallet will be funded in few seconds if top-up was successful." logo="./successLogo.png" submitText="Okay" />)}>{isFormSubmitted ? <LoaderCircle /> : "Submit"}</Button>
-          <div className="flex gap-1 py-2">
-            <CircleAlert className="size-8 text-black" />
-            <p className="text-sm text-gray-700">If you have no receipt, please contact support@amapay.co </p>
+            <Button className='w-full' onClick={() => openDialog(<SuccessDialog text="Your wallet will be funded in few seconds if top-up was successful." logo="./successLogo.png" submitText="Okay" />)}> Submit</Button>
+          <div className="flex items-center gap-1 py-2">
+             <img src="./Vector (2).png" alt=""className='size-4' />
+            <p className="text-sm text-[#2D2D2D] font-semibold">If you have no receipt, please contact support@amapay.co </p>
           </div>
 
         </form>

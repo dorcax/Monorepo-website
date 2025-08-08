@@ -24,26 +24,26 @@ const WithdrawFund = () => {
 
 
     return (
-        <CustomDrawer className='bg-white shadow-5xl py-12 px-4'>
-            <Button className='fixed top-0 left-[71.3%] py-6 w-[50px] rounded-r-none rounded-tl-none' onClick={()=>closeDrawer()}><X className='size-7' /></Button>
+        <CustomDrawer className='bg-white py-12 px-10'>
+            <Button className='absolute top-0 -left-[50px] py-6 w-[50px] rounded-r-none rounded-tl-none' onClick={()=>closeDrawer()}><X className='size-7' /></Button>
             <div>
-                {step === 1 && <div> <h2 className='text-xl font-semibold '>Withdraw</h2>
-                    <p className='text-gray-500 text-sm'>provide the details below to withdraw</p></div>}
+                {step === 1 && <div> <h2 className='text-2xl font-semibold '>Withdraw</h2>
+                    <p className='text-[#565656] text-sm pt-1'>provide the details below to withdraw</p></div>}
 
                 {step == 2 && <div>
-                    <h2 className='text-xl font-semibold capitalize'>select bank</h2>
-                    <p className='text-gray-500 text-sm py-2'>You can only withdraw to a  bank account in the same
+                    <h2 className='text-2xl font-semibold capitalize'>select bank</h2>
+                    <p className='text-[#565656] text-sm pt-1'>You can only withdraw to a  bank account in the same
                         currency and country you funded from. <span className='font-semibold text-gray-800'>Learn more</span></p>
                 </div>}
 
                 {/* step3 text */}
                 {step == 3 && <div>
-                    <h2 className='text-xl font-semibold capitalize'>add bank</h2>
-                    <p className='text-gray-500 text-xs'>You can only withdraw to a  bank account in the same
+                    <h2 className='text-2xl font-semibold capitalize'>add bank</h2>
+                    <p className='text-[#565656] text-xs pt-1'>You can only withdraw to a  bank account in the same
                         currency and country you funded from. Learn more</p>
                 </div>}
             </div>
-            <div className=' py-6'>
+            <div className=' mt-10'>
 
                 <Form {...form}>
                     <form action="" onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>

@@ -14,7 +14,7 @@ export const navItems = [
   {
     label: "Dashboard",
     icon: <LayoutDashboard className="size-5"/>,
-    path: "/dashboard",
+    path: "/",
   },
    {
     label: "Wallet",
@@ -38,9 +38,9 @@ export const navItems = [
     path: "/recipient",
   },
   {
-    label: "Transaction",
+    label: "Transactions",
     icon: <SendIcon className="size-5" />,
-    path: "/transaction",
+    path: "/transactions",
   },
   {
     label: "Reports",

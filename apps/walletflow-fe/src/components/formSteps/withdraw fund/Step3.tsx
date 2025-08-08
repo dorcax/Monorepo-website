@@ -24,10 +24,10 @@ const Step3 = ({ form}: step3Props) => {
                         name="currency"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-gray-700 w-12 text-xs'>currency</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-[#4B4B4B] px-2 text-xs'>currency</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-[100px] py-6'>
+                                        <SelectTrigger className='w-[100px] py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 
@@ -51,11 +51,11 @@ const Step3 = ({ form}: step3Props) => {
                         name="account_type"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-gray-700 
-                            w-18 text-xs'>account type</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-[#4B4B4B] 
+                             px-2 text-xs'>account type</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6 border'>
+                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 
@@ -81,9 +81,9 @@ const Step3 = ({ form}: step3Props) => {
                         control={form.control}
                         render={({ field }) => (
                             <FormItem className='w-full relative '>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-' >Account name</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-[#4B4B4B] capitalize px-2' >Account name</FormLabel>
                                 <FormControl>
-                                    <Input {...field} className='py-6' placeholder='micheal akinbowale' />
+                                    <Input {...field} className='py-6 border-[#565656]' placeholder='micheal akinbowale' />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -96,26 +96,26 @@ const Step3 = ({ form}: step3Props) => {
                         control={form.control}
                         render={({ field }) => (
                             <FormItem className='w-full relative '>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-24' >Account number</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-[#4B4B4B] capitalize px-2' >Account number</FormLabel>
                                 <FormControl>
-                                    <Input {...field} className='py-6' placeholder='micheal akinbowale' />
+                                    <Input {...field} className='py-6 b border-[#565656]' placeholder='micheal akinbowale' />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
                 </div>
-                  <div className='flex gap-4 items-center mb-5'>
+                  <div className='flex gap-2 items-center mb-5'>
                 <div className='w-full'>
                     <FormField
                         control={form.control}
                         name="currency"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-gray-700 w-18 text-xs'>swift code</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-[#4B4B4B] text-xs px-2'>swift code</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6'>
+                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 
@@ -139,11 +139,10 @@ const Step3 = ({ form}: step3Props) => {
                         name="account_type"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-gray-700 
-                            w-18 text-xs'>bank name</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-[#4B4B4B] text-xs px-2'>bank name</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6 border'>
+                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 
@@ -163,17 +162,17 @@ const Step3 = ({ form}: step3Props) => {
               
             </div>
             {/* address and city */}
-              <div className='flex gap-4 items-center mb-5'>
+              <div className='flex gap-2 items-center mb-5'>
                 <div className='w-full'>
                     <FormField
                         control={form.control}
                         name="address"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-gray-700 w-12 text-xs'>adress</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-[#4B4B4B] text-xs px-2'>address</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6'>
+                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 
@@ -197,11 +196,10 @@ const Step3 = ({ form}: step3Props) => {
                         name="city"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-gray-700 
-                            w-9 text-xs'>city</FormLabel>
+                                <FormLabel className='absolute -top-2 left-4 bg-white text-[#4B4B4B]text-xs px-2'>city</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6 border'>
+                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 

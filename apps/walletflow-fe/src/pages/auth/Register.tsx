@@ -34,7 +34,7 @@ const Register = () => {
           name="account-type"
           render={({ field }) => (
             <FormItem className='w-full relative '>
-              <FormLabel className='absolute -top-3 text-base text-gray-700 left-4 w-[100px] bg-white capitalize '>account type</FormLabel>
+              <FormLabel className='absolute -top-3 text-base text-gray-700 left-4  bg-white capitalize '>account type</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger className='w-full py-6  border border-gray-600 text-sm' >
@@ -57,7 +57,7 @@ const Register = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-10 bg-white'>Email</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 bg-white'>Email</FormLabel>
                     <FormControl>
                       <Input placeholder="jocey@gmail.com" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
@@ -73,7 +73,7 @@ const Register = () => {
                 name="first name"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-20 bg-white capitalize'>first name</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3  bg-white capitalize'>first name</FormLabel>
                     <FormControl>
                       <Input placeholder="firstname" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
@@ -86,7 +86,7 @@ const Register = () => {
                 name="lastname"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-20 bg-white  capitalize'>Last Name</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3  bg-white  capitalize'>Last Name</FormLabel>
                     <FormControl>
                       <Input placeholder="lastname" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
@@ -102,7 +102,7 @@ const Register = () => {
           name="account-type"
           render={({ field }) => (
             <FormItem className='w-full relative '>
-              <FormLabel className='absolute -top-3 text-base text-gray-700 left-4 w-18 bg-white capitalize '>country</FormLabel>
+              <FormLabel className='absolute -top-3 text-base text-gray-700 left-4  bg-white capitalize '>country</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger className='w-full py-6 border border-gray-600 text-sm '>
@@ -125,7 +125,7 @@ const Register = () => {
                 name="phoneNumber"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-28 bg-white capitalize'>phone Number</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 bg-white capitalize'>phone Number</FormLabel>
                     <FormControl>
                       <Input placeholder="phone number" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>
@@ -140,7 +140,7 @@ const Register = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem className='w-full relative'>
-                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 w-18 bg-white capitalize'>password</FormLabel>
+                    <FormLabel className='absolute -top-3 text-gray-700 text-base left-3 bg-white capitalize'>password</FormLabel>
                     <FormControl>
                       <Input placeholder="password" {...field}  className='py-6 border border-gray-600 placeholder:text-sm'/>
                     </FormControl>

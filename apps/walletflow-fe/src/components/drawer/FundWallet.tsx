@@ -25,23 +25,23 @@ const FundWallet = () => {
 
 
     return (
-        <CustomDrawer className='bg-white shadow-5xl py-12 px-10'>
-            <Button className='fixed top-0 left-[71.3%] py-6 w-[50px] rounded-r-none rounded-tl-none' onClick={() => closeDrawer()}><X className='size-7' /></Button>
+        <CustomDrawer className='bg-white py-12 px-10'>
+            <Button className='absolute top-0 -left-[50px] py-6 w-[50px] rounded-r-none rounded-tl-none' onClick={() => closeDrawer()}><X className='size-7' /></Button>
             <div>
-                {step === 1 && <div> <h2 className='text-xl font-semibold '>Fund Wallet</h2>
-                    <p className='text-gray-500 text-sm'>To fund wallet provide the details below</p></div>}
+                {step === 1 && <div> <h2 className='text-2xl font-bold '>Fund Wallet</h2>
+                    <p className='text-[#565656] text-sm mt-2'>To fund wallet provide the details below</p></div>}
 
                 {step == 2 &&
                     (
-                        method === "card" ? (
+                        method === "transfer" ? (
                             <div>
-                                <h2 className='text-xl font-semibold capitalize'>fund with card</h2>
-                                <p className='text-gray-500 text-sm py-2'>Your CVV is the 3-digit number behind your card</p>
+                                <h2 className='text-2xl font-semibold capitalize'>fund with card</h2>
+                                <p className='text-[#565656] text-sm mt-2'>Your CVV is the 3-digit number behind your card</p>
                             </div>
                         ) : (
                             <div>
-                                <h2 className='text-xl font-semibold capitalize'>Bank transfer</h2>
-                                <p className='text-gray-500 text-sm py-2'>Tansfer the amount mentioned below to AmaPay
+                                <h2 className='text-2xl font-semibold capitalize'>Bank transfer</h2>
+                                <p className='text-[#565656] text-sm py-2'>Tansfer the amount mentioned below to AmaPay
                                     and provide the transaction receipt for the transfer.</p>
                             </div>
 
@@ -51,12 +51,12 @@ const FundWallet = () => {
 
                 {/* step3 text */}
                 {step == 3  && <div>
-                    <h2 className='text-xl font-semibold capitalize'>share receipt</h2>
-                    <p className='text-gray-500 text-xs'>Please share a screenshot or picture of the
+                    <h2 className='text-2xl font-semibold capitalize'>share receipt</h2>
+                    <p className='text-[#565656] text-sm pt-1'>Please share a screenshot or picture of the
                         transaction receipt for fast confirmation.</p>
                 </div>}
             </div>
-            <div className=' py-6'>
+            <div className=' mt-11'>
 
                 <Form {...form}>
                     <form action="" onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>

@@ -26,18 +26,18 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
      
     return (
         <div>
-            <div className='flex gap-4 items-center'>
-                <div className="mb-5 w-[100px]">
+            <div className='flex gap-3 items-center'>
+                <div className="mb-5 w-[109px]">
 
                     <FormField
                         control={form.control}
                         name="currency"
                         render={({ field }) => (
                             <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs w-11 text-gray-700'>Currency</FormLabel>
+                                <FormLabel className='absolute px-1 -top-2  left-4  bg-white text-xs  text-gray-700 '>Currency</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6'>
+                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
                                             <SelectValue placeholder="Select" />
                                         </SelectTrigger>
 
@@ -59,9 +59,9 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                         control={form.control}
                         render={({ field }) => (
                             <FormItem className='w-full relative '>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-12' >country</FormLabel>
+                                <FormLabel className='absolute px-1 -top-2 left-4 bg-white text-xs text-gray-700 capitalize ' >country</FormLabel>
                                 <FormControl>
-                                    <Input {...field} className='py-6' placeholder='micheal akinbowale' readOnly />
+                                    <Input {...field} className='py-6 border-[#565656]' placeholder='micheal akinbowale'  />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -77,9 +77,9 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                     control={form.control}
                     render={({ field }) => (
                         <FormItem className='w-full relative '>
-                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize w-12' >Amount</FormLabel>
+                            <FormLabel className='absolute px-1 -top-2 left-4 bg-white text-xs text-gray-700 capitalize ' >Amount</FormLabel>
                             <FormControl>
-                                <Input {...field} className='py-6' placeholder='micheal akinbowale' />
+                                <Input {...field} className='py-6 border-[#565656]' placeholder='micheal akinbowale' />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -98,13 +98,13 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="flex  justify-between items-center mb-8 text-gray-700"
+                  className="flex  justify-between items-center mb-5 text-gray-700"
                 >
                   <FormItem className="flex items-center gap-3">
                     <FormControl>
                       <RadioGroupItem value="all" />
                     </FormControl>
-                    <FormLabel className="font-normal">
+                    <FormLabel className="font-normal text-xs">
                       Fund with Card
                     </FormLabel>
                   </FormItem>
@@ -113,7 +113,7 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                     <FormControl>
                       <RadioGroupItem value="none" />
                     </FormControl>
-                    <FormLabel className="font-normal">Bank Transfer</FormLabel>
+                    <FormLabel className="font-normal text-xs">Bank Transfer</FormLabel>
                   </FormItem>
                 </RadioGroup>
               </FormControl>
@@ -126,8 +126,10 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
             {/* submit button */}
             <Button className='w-full'  onClick={()=>setStep(2)}>{isFormSubmitted ?<LoaderCircle/>:"proceed"}</Button>
             <div className="flex gap-1 items-center my-8">
-                <CircleAlert className="size-5"/>
-                <span className="text-gray-700 text-xs ">minimum amount is #1000</span>
+                {/* <CircleAlert className="size-5"/> */}
+                 <img src="./Vector (2).png" alt=""className='size-3.5' />
+                 <img src="./Vector.svg" alt=""className='size-3' />
+                <span className="text-[#565656] text-xs ">Minimum amount is #1000</span>
             </div>
         </div>
     )

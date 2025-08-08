@@ -5,6 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Dashboard from "./pages/Dashboard/Dashboard"
 import TransferTable from "./components/TransferTable"
 import PopUpProvider from "./context/PopUpContext"
+import ResetPassword from "./pages/auth/ResetPassword"
+import Reports from "./pages/Dashboard/Reports"
+import Transaction from "./pages/Dashboard/Transaction"
+import Exchange from "./pages/Dashboard/Exchange"
 
 const router = createBrowserRouter([
   {
@@ -16,11 +20,23 @@ const router = createBrowserRouter([
     element: <Login />
   },
   {
-    path: "/dashboard",
+    path: "/",
     element: <Dashboard />,
     children: [{
       index: true,
       element: <TransferTable />
+    },{
+      path:"settings",
+      element:<ResetPassword/>
+    },{
+      path:"reports",
+      element:<Reports/>
+    },{
+      path:"transactions",
+      element:<Transaction/>
+    },{
+      path:"exchange",
+      element:<Exchange/>
     }]
   }
 ])

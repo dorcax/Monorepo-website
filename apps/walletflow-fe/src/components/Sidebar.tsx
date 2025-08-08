@@ -10,7 +10,7 @@ const Sidebar = () => {
   const { openPopOver } = usePopUp()
 
   return (
-    <aside className="bg-white shadow-2xl w-[180px] h-[calc(100vh-80px)] rounded-2xl px-2 ">
+    <aside className="bg-white w-[250px] h-[calc(100vh-80px)] rounded-2xl px-2 ">
       {/* Logo */}
       <img src="./sidebarlogo.png" alt="Sidebar Logo" className="px-6 py-7 w-full" />
 

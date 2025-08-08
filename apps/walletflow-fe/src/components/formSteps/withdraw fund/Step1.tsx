@@ -24,7 +24,7 @@ type step1Props ={
 const Step1 = ({form,isFormSubmitted,setStep}:step1Props) => {
   return (
     <div>
-         <div className="mb-5" >
+         <div className="mb-8" >
 
                                 <FormField
                                     control={form.control}
@@ -32,10 +32,10 @@ const Step1 = ({form,isFormSubmitted,setStep}:step1Props) => {
                                     name="wallet"
                                     render={({ field }) => (
                                         <FormItem className='relative'>
-                                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs w-18 text-gray-700'>Select wallet</FormLabel>
+                                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs px-2 text-gray-700'>Select wallet</FormLabel>
                                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                                 <FormControl>
-                                                    <SelectTrigger className='w-full py-6'>
+                                                    <SelectTrigger className='w-full py-6 border-[#565656]'>
                                                         <SelectValue placeholder="Select" />
                                                     </SelectTrigger>
 
@@ -57,9 +57,9 @@ const Step1 = ({form,isFormSubmitted,setStep}:step1Props) => {
                                     control={form.control}
                                     render={({ field }) => (
                                         <FormItem className='w-full relative '>
-                                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700' >Amount</FormLabel>
+                                            <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-[#4B4B4B] px-2' >Amount</FormLabel>
                                             <FormControl>
-                                                <Input {...field} className='py-6' placeholder='e.g 300,000' />
+                                                <Input {...field} className='py-6 border-[#565656]' placeholder='e.g 300,000' />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -67,9 +67,9 @@ const Step1 = ({form,isFormSubmitted,setStep}:step1Props) => {
                                 />
 
                             </div>
-                            <div className='flex gap-2 items-center mb-5'>
+                            <div className='flex gap-2 items-center mb-7'>
                                 <AlertCircle className='size-4' />
-                                <span className='text-gray-500 text-xs'>Minimum amount is #3000</span>
+                                <span className='text-[#565656] font-normal text-xs'>Minimum amount is #3000</span>
                             </div>
 
                             <Button className='w-full text-sm ' onClick={() => setStep(2)}>{isFormSubmitted ? <Loader /> : "Proceed"}</Button>

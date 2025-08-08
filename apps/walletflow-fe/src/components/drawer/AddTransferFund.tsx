@@ -20,8 +20,8 @@ const AddTransferFund = () => {
   return (
     // title='Transfer Funds ' subtext='select the currency you want to transfer funds to' 
     <CustomDrawer
-      className='bg-white shadow-5xl py-12 px-5 border'>
-      <Button className='fixed top-0 left-[71.3%] py-6 w-[50px] rounded-r-none rounded-tl-none'  onClick={() => closeDrawer()} >
+      className='bg-white  py-12 px-5 border'>
+      <Button className='absolute top-0 -left-[50px] py-6 w-[50px] rounded-r-none rounded-tl-none'  onClick={() => closeDrawer()} >
         <X className='size-7'/>
         
         </Button>
