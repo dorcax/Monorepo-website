@@ -23,7 +23,7 @@ const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSu
                                 <FormItem className='w-full relative '>
                                     <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize px-1' >card number</FormLabel>
                                     <FormControl>
-                                        <Input {...field} className='py-6 border-[#565656]' placeholder='card number' />
+                                        <Input {...field} className='py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]' placeholder='0000 0000 0000 0000' />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -39,9 +39,9 @@ const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSu
                                 control={form.control}
                                 render={({ field }) => (
                                     <FormItem className='w-full relative '>
-                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize ' >card expiry</FormLabel>
+                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize px-1 ' >card expiry</FormLabel>
                                         <FormControl>
-                                            <Input {...field} className='py-6 border-[#565656]' placeholder='MM/YY' />
+                                            <Input {...field} className='py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]' placeholder='MM/YY' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -55,9 +55,9 @@ const RenderCardTransfer = ({form,isFormSubmitted,openDialog}:{form:any,isFormSu
                                 control={form.control}
                                 render={({ field }) => (
                                     <FormItem className='w-full relative '>
-                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize PX-1' >card cvv</FormLabel>
+                                        <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-gray-700 capitalize px-1' >card cvv</FormLabel>
                                         <FormControl>
-                                            <Input {...field} className='py-6 border-[#565656]' placeholder='000' />
+                                            <Input {...field} className='py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]' placeholder='000' />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>

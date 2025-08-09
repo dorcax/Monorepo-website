@@ -20,24 +20,24 @@ const AddTransferFund = () => {
   return (
     // title='Transfer Funds ' subtext='select the currency you want to transfer funds to' 
     <CustomDrawer
-      className='bg-white  py-12 px-5 border'>
+      className='bg-white  py-12 px-10 border sm:max-w-[450px]'>
       <Button className='absolute top-0 -left-[50px] py-6 w-[50px] rounded-r-none rounded-tl-none'  onClick={() => closeDrawer()} >
         <X className='size-7'/>
         
         </Button>
       {step === 0 && <div>
         <h2 className='text-2xl font-bold capitalize'>Transfer fund</h2>
-        <p className='text-gray-500 text-sm'>select the currency you want to transfer funds to</p>
+        <p className='text-[#565656]  text-sm mt-2'>select the currency you want to transfer funds to</p>
       </div>}
        {step === 1 && <div>
         <h2 className='text-2xl font-bold capitalize'>Select Recipient </h2>
-        <p className='text-gray-500 text-sm'>select  a recipient tbank account to transfer to</p>
+        <p className='text-[#565656] mt-2 text-sm'>select  a recipient tbank account to transfer to</p>
       </div>}
         {step === 2 && <div>
         <h2 className='text-2xl font-bold capitalize'>add Recipient </h2>
-        <p className='text-gray-500 text-sm'>please ensure you fill the form correctly</p>
+        <p className='text-[#565656] mt-2 text-sm'>please ensure you fill the form correctly</p>
       </div>}
-      <div>
+      <div className='mt-10'>
         <Form {...form}>
           <form action="" onSubmit={form.handleSubmit(onSubmit)} className='space-y-5'>
             {/* <p>i want to send</p> */}

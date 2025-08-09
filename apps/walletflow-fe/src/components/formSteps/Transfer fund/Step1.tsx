@@ -19,39 +19,16 @@ const Step1 = ({form,setStep}:{form:any,setStep:(n:number)=>void}) => {
   return (
     <div>
 
-         <FormField
-                        control={form.control}
-                        name="currency"
-                        render={({ field }) => (
-                            <FormItem className='relative'>
-                                <FormLabel className='absolute -top-2 left-4 bg-white text-xs w-11 text-gray-700'>Currency</FormLabel>
-                                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                                    <FormControl>
-                                        <SelectTrigger className='w-full py-6'>
-                                            <SelectValue placeholder="Select" />
-                                        </SelectTrigger>
 
-                                    </FormControl>
-                                    <SelectContent>
-                                        <SelectItem value="light">Light</SelectItem>
-                                        <SelectItem value="dark">Dark</SelectItem>
-                                        <SelectItem value="system">System</SelectItem>
-                                    </SelectContent>
-                                </Select>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-       
-              <div className='flex  justify-between items-end gap-3 mb-4'>
+              <div className='flex  justify-between items-end gap-2 mb-5'>
               <FormField
                 name="amount"
                 control={form.control}
                 render={({ field }) => (
                   <FormItem className='w-full'>
-                    <FormLabel >i want to send  </FormLabel>
+                    <FormLabel  className='text-[#2B2B2B] text-sm font-bold'>I want to send  </FormLabel>
                     <FormControl>
-                      <Input {...field} className=' ' placeholder='e.g 300,000' />
+                      <Input {...field} className='py-5 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8] ' placeholder='e.g 300,000' />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -63,10 +40,10 @@ const Step1 = ({form,setStep}:{form:any,setStep:(n:number)=>void}) => {
                 name="wallet"
                 render={({ field }) => (
                   <FormItem className=' w-[140px] relative '>
-                    <FormLabel className='absolute -top-2 left-4 bg-white z-10'>wallet</FormLabel>
+                    <FormLabel className='absolute -top-2 left-4 bg-white '>Wallet</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger className='pt-4'>
+                        <SelectTrigger className='py-5 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]'>
                           <SelectValue placeholder="Select" />
                         </SelectTrigger>
 
@@ -86,32 +63,23 @@ const Step1 = ({form,setStep}:{form:any,setStep:(n:number)=>void}) => {
               />
 
             </div>
-         <div className='flex items-center mb-4'>
-             <div className="flex flex-col items-start px-4">
-              {/* top Circle */}
-              <div className="size-2 rounded-full bg-black"></div>
-
-              {/*  Line in the Middle */}
-              <div className="h-16 w-px mx-[2.5px] border-2 border-gray-600"></div>
-
-              {/*  bottom Circle */}
-              <div className="size-2 rounded-full bg-black"></div>
-            </div>
+         <div className='flex gap-1 items-center justify-center mb-5'>
+            <img src="./Line 9.svg" alt=""  />
             <div className='flex items-center gap-1'>
               <img src="./Vector.png" alt="" className='size-3'/>
-              <span className='text-sm text-gray-600'> Rate: <span className='font-semibold text-black'>1 NGN = 0.00169924 SGD</span></span>
+              <p className='text-sm text-[#565656]'> Rate: <span className='font-semibold text-black '>1 NGN = 0.00169924 SGD</span></p>
             </div>
          </div>
 
-            <div className='flex justify-between items-end gap-3 mb-4'>
+            <div className='flex justify-between items-end gap-2 mb-4'>
               <FormField
                 name="amount"
                 control={form.control}
                 render={({ field }) => (
                   <FormItem className='w-full'>
-                    <FormLabel >Recipient gets </FormLabel>
+                    <FormLabel className='text-[#2B2B2B] font-bold text-sm' >Recipient gets </FormLabel>
                     <FormControl>
-                      <Input {...field} className=' ' placeholder='e.g 300,000' readOnly />
+                      <Input {...field} className='border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8] py-5 ' placeholder='e.g 300,000' readOnly />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -124,11 +92,11 @@ const Step1 = ({form,setStep}:{form:any,setStep:(n:number)=>void}) => {
                 name="currency"
                 render={({ field }) => (
                   <FormItem className=' w-[140px] relative '>
-                    <FormLabel className='absolute -top-2 left-4 bg-white '>currency</FormLabel>
+                    <FormLabel className='absolute -top-2 left-4 bg-white  text-xs'>Currency</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger className='pt-4'>
-                          <SelectValue placeholder="Select" />
+                        <SelectTrigger className='border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8] py-5'>
+                          <SelectValue placeholder="select" />
                         </SelectTrigger>
 
                       </FormControl>
@@ -147,7 +115,7 @@ const Step1 = ({form,setStep}:{form:any,setStep:(n:number)=>void}) => {
               />
 
             </div>
-            <Button className='w-full text-base' onClick={()=>setStep(1)}>proceed</Button>
+            <Button className='w-full text-base mt-4' onClick={()=>setStep(1)}>proceed</Button>
 
     </div>
   )

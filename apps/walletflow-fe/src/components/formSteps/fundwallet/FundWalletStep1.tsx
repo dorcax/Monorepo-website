@@ -37,8 +37,8 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                                 <FormLabel className='absolute px-1 -top-2  left-4  bg-white text-xs  text-gray-700 '>Currency</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                     <FormControl>
-                                        <SelectTrigger className='w-full py-6 border-[#565656]'>
-                                            <SelectValue placeholder="Select" />
+                                        <SelectTrigger className='w-full py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]'>
+                                            <SelectValue placeholder="select" />
                                         </SelectTrigger>
 
                                     </FormControl>
@@ -59,9 +59,9 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                         control={form.control}
                         render={({ field }) => (
                             <FormItem className='w-full relative '>
-                                <FormLabel className='absolute px-1 -top-2 left-4 bg-white text-xs text-gray-700 capitalize ' >country</FormLabel>
+                                <FormLabel className='absolute px-1 -top-2 left-4 bg-white text-xs text-gray-700 capitalize  ' >country</FormLabel>
                                 <FormControl>
-                                    <Input {...field} className='py-6 border-[#565656]' placeholder='micheal akinbowale'  />
+                                    <Input {...field} className='py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]' placeholder='micheal akinbowale'  />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -71,7 +71,7 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
 
             </div>
             {/* amount */}
-            <div className='mb-5 w-full'>
+            <div className='mb-8 w-full'>
                 <FormField
                     name="amount"
                     control={form.control}
@@ -79,7 +79,7 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
                         <FormItem className='w-full relative '>
                             <FormLabel className='absolute px-1 -top-2 left-4 bg-white text-xs text-gray-700 capitalize ' >Amount</FormLabel>
                             <FormControl>
-                                <Input {...field} className='py-6 border-[#565656]' placeholder='micheal akinbowale' />
+                                <Input {...field} className='py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]' placeholder='e.g.300,000' />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -88,7 +88,7 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
             </div>
             {/* radio button to select method of transfer */}
             {/* amount */}
-            <div>
+            <div className="">
                <FormField
           control={form.control}
           name="type"
@@ -122,12 +122,11 @@ const FundWalletStep1 = ({ form, setStep,isFormSubmitted }: step1Props) => {
           )}
         />
             </div>
-            
+        
             {/* submit button */}
-            <Button className='w-full'  onClick={()=>setStep(2)}>{isFormSubmitted ?<LoaderCircle/>:"proceed"}</Button>
-            <div className="flex gap-1 items-center my-8">
+            <Button className='w-full mt-3'  onClick={()=>setStep(2)}>{isFormSubmitted ?<LoaderCircle/>:"proceed"}</Button>
+            <div className="flex gap-1 items-center my-6">
                 {/* <CircleAlert className="size-5"/> */}
-                 <img src="./Vector (2).png" alt=""className='size-3.5' />
                  <img src="./Vector.svg" alt=""className='size-3' />
                 <span className="text-[#565656] text-xs ">Minimum amount is #1000</span>
             </div>

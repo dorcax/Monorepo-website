@@ -18,10 +18,10 @@ const DatePicker = () => {
                     <Button
                         variant="outline"
                         data-empty={!date}
-                        className="data-[empty=true]:text-muted-foreground w-[120px] justify-start text-left font-normal"
+                        className="data-[empty=true]:text-muted-foreground w-[180px] justify-center items-center font-normal shadow-0  border-0 "
                     >
                         {/* <CalendarIcon /> */}
-                        {date ? format(date, "PPP") : <span>DD / MM / YY</span>}
+                        {date ? format(date, "PPP") : <span className="text-[#939393] text-xs font-semibold">DD  / MM  / YY</span>}
                     </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0">

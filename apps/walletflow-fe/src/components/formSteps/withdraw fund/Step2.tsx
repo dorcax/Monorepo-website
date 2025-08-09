@@ -37,8 +37,8 @@ const Step2 = ({ form, setStep }: step2Props) => {
                             <FormLabel className='absolute -top-2 left-4 bg-white text-xs px-2 text-[#4B4B4B]'>Select saved wallet</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
-                                    <SelectTrigger className='w-full py-6 border-[#565656]'>
-                                        <SelectValue placeholder="Select" />
+                                    <SelectTrigger className='w-full py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]'>
+                                        <SelectValue placeholder="select" />
                                     </SelectTrigger>
 
                                 </FormControl>

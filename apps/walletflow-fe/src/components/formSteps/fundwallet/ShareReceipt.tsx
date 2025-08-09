@@ -46,8 +46,8 @@ const ShareReceipt = (isFormSubmitted:any) => {
           />
           {/* <Button className='w-full my-4'>submit</Button> */}
             <Button className='w-full' onClick={() => openDialog(<SuccessDialog text="Your wallet will be funded in few seconds if top-up was successful." logo="./successLogo.png" submitText="Okay" />)}> Submit</Button>
-          <div className="flex items-center gap-1 py-2">
-             <img src="./Vector (2).png" alt=""className='size-4' />
+          <div className="flex  gap-1 py-2">
+             <img src="./Vector (2).png" alt=""className='size-4 mt-1' />
             <p className="text-sm text-[#2D2D2D] font-semibold">If you have no receipt, please contact support@amapay.co </p>
           </div>
 

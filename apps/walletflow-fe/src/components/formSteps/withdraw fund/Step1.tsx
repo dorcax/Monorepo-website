@@ -35,8 +35,8 @@ const Step1 = ({form,isFormSubmitted,setStep}:step1Props) => {
                                             <FormLabel className='absolute -top-2 left-4 bg-white text-xs px-2 text-gray-700'>Select wallet</FormLabel>
                                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                                 <FormControl>
-                                                    <SelectTrigger className='w-full py-6 border-[#565656]'>
-                                                        <SelectValue placeholder="Select" />
+                                                    <SelectTrigger className='w-full py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]'>
+                                                        <SelectValue placeholder="select" />
                                                     </SelectTrigger>
 
                                                 </FormControl>
@@ -59,7 +59,7 @@ const Step1 = ({form,isFormSubmitted,setStep}:step1Props) => {
                                         <FormItem className='w-full relative '>
                                             <FormLabel className='absolute -top-2 left-4 bg-white text-xs text-[#4B4B4B] px-2' >Amount</FormLabel>
                                             <FormControl>
-                                                <Input {...field} className='py-6 border-[#565656]' placeholder='e.g 300,000' />
+                                                <Input {...field} className='py-6 border-[#565656] placeholder:text-sm placeholder:text-[#A8A8A8]' placeholder='e.g 300,000' />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>

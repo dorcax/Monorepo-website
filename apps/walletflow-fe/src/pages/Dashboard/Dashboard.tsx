@@ -16,7 +16,7 @@ const Dashboard = () => {
   // Capitalize the first letter
   const pageTitle = currentPage.charAt(0).toUpperCase() + currentPage.slice(1)
   return (
-    <div className='bg-[#f4f4f4]  h-screen overflow-hidden '>
+    <div className='bg-[#f4f4f4]  '>
       <div className='flex gap-6 p-10'>
         {/* sidebar section */}
         <section className=''>
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
  
         {/* main content */}
-        <main className='flex-1 '>
+        <main className='flex-1 overflow-y-auto pl-[250px]'>
           <header className='flex items-center justify-between'>
             <h2 className='text-xl text-gray-500'>{pageTitle}</h2>
             {/* search input */}

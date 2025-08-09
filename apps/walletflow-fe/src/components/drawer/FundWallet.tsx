@@ -33,7 +33,7 @@ const FundWallet = () => {
 
                 {step == 2 &&
                     (
-                        method === "transfer" ? (
+                        method === "card" ? (
                             <div>
                                 <h2 className='text-2xl font-semibold capitalize'>fund with card</h2>
                                 <p className='text-[#565656] text-sm mt-2'>Your CVV is the 3-digit number behind your card</p>

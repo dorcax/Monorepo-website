@@ -12,7 +12,7 @@ const FundWalletStep2 = ({ form, setStep, isFormSubmitted, method }: step1Props)
     return (
         <div>
             {/* amount */}
-            {method === "transfer" ? (
+            {method === "card" ? (
 
             <RenderCardTransfer form={form} isFormSubmitted={isFormSubmitted} openDialog={openDialog}/>
             ) :
